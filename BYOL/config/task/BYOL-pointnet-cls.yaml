@@ -1,0 +1,21 @@
+optimizer:
+    weight_decay: 0.0
+    lr: 1e-3
+    type: adam
+
+network: PointNet
+dataset: ShapeNet # ShapeNet, ShapeNetPart, ModelNet40, ScanNet
+num_points: 2048 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
+epochs: 50
+batch_size: 48
+acc_batches: 1
+transform_mode: spatial
+
+decay_rate: 0.996
+mlp_hidden_size: 4096
+projection_size: 256
+
+emb_dims: 1024
+num_workers: 32
+
+resume_ckpt:

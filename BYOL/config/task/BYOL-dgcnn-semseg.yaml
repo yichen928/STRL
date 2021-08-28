@@ -1,0 +1,24 @@
+optimizer:
+    weight_decay: 0.0
+    lr: 2e-4
+    type: adam
+
+network: DGCNN-Semseg
+dataset: ScanNetFrames # ShapeNet, ShapeNetPart, ModelNet40, ScanNetFrames
+num_points: 4096 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
+epochs: 100
+batch_size: 32
+acc_batches: 1
+transform_mode: both
+
+decay_rate: 0.996
+mlp_hidden_size: 4096
+projection_size: 256
+
+k: 20
+window_length: 3
+emb_dims: 1024
+dropout: 0.5
+num_workers: 32
+
+resume_ckpt: 

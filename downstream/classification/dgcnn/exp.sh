@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=0,1,2,4 python main_partseg.py --exp_name=exp_partseg_scannet_subset_pretrain_72_150epochs --pretrain_weight /DATA1/Benchmark/yichen/outputs/BYOL-cls-dgcnn-k=40-2048points-lr2e-4-bs32-poolingfeature-epoch100-ShapeNet/epoch=72-val_loss=0.4957.ckpt --epochs 150;
+CUDA_VISIBLE_DEVICES=0,1,2,4 python main_partseg.py --exp_name=exp_partseg_scannet_subset_pretrain_72 --pretrain_weight /DATA1/Benchmark/yichen/outputs/BYOL-cls-dgcnn-k=40-2048points-lr2e-4-bs32-poolingfeature-epoch100-ShapeNet/epoch=72-val_loss=0.4957.ckpt;

@@ -1,0 +1,3 @@
+task_model:
+    class: BYOL.models.PointNet2ClassificationSSG
+    name: BYOL-cls-dgcnn-k=40-2048points-lr2e-4-bs32-poolingfeature-epoch100-ShapeNet

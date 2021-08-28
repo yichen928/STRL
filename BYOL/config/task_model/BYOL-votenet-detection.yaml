@@ -1,0 +1,3 @@
+task_model:
+    class: BYOL.models.BasicalModel
+    name: BYOL-cls-ssg-VoteNet-noheight-ShapeNet-spatial-temporal-epoch100-2048points
