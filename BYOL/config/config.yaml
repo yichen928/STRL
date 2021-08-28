@@ -1,0 +1,17 @@
+defaults:
+    - task: BYOL-votenet-detection
+    - task_model: ${defaults.0.task}
+
+hydra:
+  run:
+    dir: outputs
+
+gpus: 
+    - 0
+    - 1
+
+optimizer: ??
+
+task_model: ??
+
+distrib_backend: dp

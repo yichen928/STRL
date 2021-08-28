@@ -1,0 +1,24 @@
+optimizer:
+    weight_decay: 0.01
+    lr: 1e-4
+    type: adamw
+
+network: DGCNN
+dataset: ShapeNet # ShapeNet, ShapeNetPart, ModelNet40, ScanNet
+num_points: 2048 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
+epochs: 100
+batch_size: 36
+acc_batches: 1
+transform_mode: both
+
+decay_rate: 0.996
+mlp_hidden_size: 4096
+projection_size: 256
+
+k: 40
+emb_dims: 1024
+window_length: 3
+dropout: 0.5
+num_workers: 32
+
+resume_ckpt: /mnt/data/siyuan/outputs/BYOL-cls-dgcnn-k=40-2048points-lr1e-4-bs36-poolingfeature-epoch100-adamw/epoch=36-val_loss=0.5884.ckpt

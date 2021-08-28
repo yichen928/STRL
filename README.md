@@ -1,0 +1,101 @@
+# Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds
+
+
+
+This is the official code implementation for the paper "Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds" (ICCV 2021)
+
+## Checklist
+
+### Self-supervised Pre-training Framework
+
++ [x] BYOL
++ [ ] SimCLR
+
+### Downstream Tasks
+
++ [x] Shape Classification
++ [x] Semantic Segmentation
++ [x] Indoor Object Detection
++ [ ] Outdoor Object Detection
+
+## Installation 
+
+The code was tested with the following environment: Ubuntu 18.04, python 3.7, pytorch 1.7.1, torchvision 0.8.2 and CUDA 11.1.
+
+For self-supervised pre-training, run the following command:
+
+```
+git clone https://github.com/yichen928/STRL.git
+cd STRL
+pip install -r requirements.txt
+```
+
+For downstream tasks, please refer to the `README.md` file of each task.
+
+## Pre-training
+
+### BYOL framework
+
+Please run the following command:
+
+```
+python BYOL/train.py
+```
+
+You need to edit the config file `BYOL/config/config.yaml` to switch different backbone architectures (currently including `BYOL-pointnet-cls, BYOL-dgcnn-cls, BYOL-dgcnn-semseg, BYOL-votenet-detection`).
+
+## Linear Evaluation
+
+For PointNet or DGCNN classification backbones, you may evaluate the learnt representation with linear SVM classifier by running the following command:
+
+For PointNet:
+
+```
+python evaluate_pointnet.py -w /path/to/your/pre-trained/checkpoints
+```
+
+For DGCNN:
+
+```
+python evaluate_dgcnn.py -w /path/to/your/pre-trained/checkpoints
+```
+
+## Downstream Tasks
+
+### Checkpoints Transformation
+
+You can transform the pre-trained checkpoints to different downstream tasks by running:
+
+For VoteNet:
+
+```
+python transform_ckpt_votenet.py --input_path /path/to/your/pre-trained/checkpoints --output_path /path/to/the/transformed/checkpoints
+```
+
+For other backbones:
+
+```
+python transform_ckpt.py --input_path /path/to/your/pre-trained/checkpoints --output_path /path/to/the/transformed/checkpoints
+```
+
+### Fine-tuning and Evaluation for Downstream Tasks
+
+For the fine-tuning and evaluation of downstream tasks, please refer to other corresponding repos. We sincerely thank all these authors for their nice work!
+
++ Classification: [WangYueFt](https://github.com/WangYueFt)/**[dgcnn](https://github.com/WangYueFt/dgcnn)**
++ Semantic Segmentation: [AnTao97/*dgcnn*.pytorch](https://github.com/AnTao97/dgcnn.pytorch)
++ Indoor Object Detection: [facebookresearch/*votenet*](https://github.com/facebookresearch/votenet)
+
+## Citation
+
+If you found our paper or code useful for your research, please cite the following paper:
+
+```
+@inproceedings{huang2021spatio,
+  title={Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds},
+  author={Huang, Siyuan and Xie, Yichen and Zhu, Song-Chun and Zhu, Yixin},
+  booktitle={International Conference on Computer Vision (ICCV)},
+  year={2021}
+}
+```
+

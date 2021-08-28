@@ -1,0 +1,22 @@
+optimizer:
+    weight_decay: 0.0
+    lr: 1e-3
+    type: adam
+
+network: votenet
+dataset: ScanNetFrames # ShapeNet, ShapeNetPart, ModelNet40, ScanNet, ScanNetFrames
+num_points: 2048 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
+epochs: 100
+batch_size: 32
+acc_batches: 1
+
+decay_rate: 0.996
+mlp_hidden_size: 4096
+projection_size: 256
+downstream: VoteNet
+with_height: False
+transform_mode: both
+
+num_workers: 32
+
+resume_ckpt: 

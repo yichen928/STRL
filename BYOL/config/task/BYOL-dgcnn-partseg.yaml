@@ -1,0 +1,26 @@
+optimizer:
+    weight_decay: 0.0
+    lr: 2e-4
+    lr_decay: 0.7
+    bn_momentum: 0.5
+    bnm_decay: 0.5
+    decay_step: 2e4
+    type: adam
+
+network: DGCNN-Partseg
+dataset: ShapeNet # ShapeNet, ShapeNetPart, ModelNet40, ScanNet
+num_points: 2048 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
+epochs: 100
+batch_size: 32
+acc_batches: 1
+transform_mode: both
+
+decay_rate: 0.996
+mlp_hidden_size: 4096
+projection_size: 256
+
+root_path: /media/siyuan/2f9b2b54-148c-456e-912c-24c692a0a092/home/siyuan/Dataset/scannet/scans
+k: 40
+window_length: 3
+emb_dims: 1024
+dropout: 0.5
