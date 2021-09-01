@@ -32,6 +32,27 @@ pip install -r requirements.txt
 
 For downstream tasks, please refer to the `README.md` file of each task.
 
+## Datasets
+
+Please download the used dataset with the following links:
+
++ ShapeNet: https://drive.google.com/uc?id=1sJd5bdCg9eOo3-FYtchUVlwDgpVdsbXB
+
++ ModelNet40: https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip
++ ScanNet (subset): Please follow the instruction in their official [website](http://www.scan-net.org/). The 25k frames subset is enough for our model.
+
+Make sure to put the files in the following structure:
+
+```
+|-- ROOT
+|	|-- BYOL
+|		|-- data
+|			|-- modelnet40_normal_resampled_cache
+|			|-- shapenet57448xyzonly.npz
+|			|-- scannet
+|				|-- scannet_frames_25k
+```
+
 ## Pre-training
 
 ### BYOL framework
@@ -43,6 +64,10 @@ python BYOL/train.py
 ```
 
 You need to edit the config file `BYOL/config/config.yaml` to switch different backbone architectures (currently including `BYOL-pointnet-cls, BYOL-dgcnn-cls, BYOL-dgcnn-semseg, BYOL-votenet-detection`).
+
+### Pre-trained Models
+
+Coming soon.
 
 ## Linear Evaluation
 
@@ -82,7 +107,7 @@ python transform_ckpt.py --input_path /path/to/your/pre-trained/checkpoints --ou
 
 For the fine-tuning and evaluation of downstream tasks, please refer to other corresponding repos. We sincerely thank all these authors for their nice work!
 
-+ Classification: [WangYueFt](https://github.com/WangYueFt)/**[dgcnn](https://github.com/WangYueFt/dgcnn)**
++ Classification: [WangYueFt](https://github.com/WangYueFt)/[dgcnn](https://github.com/WangYueFt/dgcnn)
 + Semantic Segmentation: [AnTao97/*dgcnn*.pytorch](https://github.com/AnTao97/dgcnn.pytorch)
 + Indoor Object Detection: [facebookresearch/*votenet*](https://github.com/facebookresearch/votenet)
 
