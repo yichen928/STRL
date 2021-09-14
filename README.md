@@ -107,7 +107,7 @@ python transform_ckpt.py --input_path /path/to/your/pre-trained/checkpoints --ou
 
 For the fine-tuning and evaluation of downstream tasks, please refer to other corresponding repos. We sincerely thank all these authors for their nice work!
 
-+ Classification: [WangYueFt](https://github.com/WangYueFt)/[dgcnn](https://github.com/WangYueFt/dgcnn)
++ Classification: [WangYueFt/dgcnn](https://github.com/WangYueFt/dgcnn)
 + Semantic Segmentation: [AnTao97/*dgcnn*.pytorch](https://github.com/AnTao97/dgcnn.pytorch)
 + Indoor Object Detection: [facebookresearch/*votenet*](https://github.com/facebookresearch/votenet)
 
