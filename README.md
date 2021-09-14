@@ -30,7 +30,7 @@ cd STRL
 pip install -r requirements.txt
 ```
 
-For downstream tasks, please refer to the `README.md` file of each task.
+For downstream tasks, please refer to the `Downstream Tasks` section.
 
 ## Datasets
 
