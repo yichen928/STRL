@@ -2,7 +2,7 @@
 
 
 
-This is the official code implementation for the paper "Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds" (ICCV 2021)
+This is the official code implementation for the paper "Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds" (ICCV 2021) [paper](https://arxiv.org/abs/2109.00179)
 
 ## Checklist
 
