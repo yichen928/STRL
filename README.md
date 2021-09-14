@@ -67,7 +67,7 @@ You need to edit the config file `BYOL/config/config.yaml` to switch different b
 
 ### Pre-trained Models
 
-Coming soon.
+You can find the checkpoints of the pre-training and downstream tasks in our [Google Drive](https://drive.google.com/drive/folders/1uip_uZtyoVdTbwUM4QUZmEcXROpV2-8n?usp=sharing).
 
 ## Linear Evaluation
 
