@@ -116,10 +116,10 @@ For the fine-tuning and evaluation of downstream tasks, please refer to other co
 If you found our paper or code useful for your research, please cite the following paper:
 
 ```
-@inproceedings{huang2021spatio,
+@article{huang2021spatio,
   title={Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds},
   author={Huang, Siyuan and Xie, Yichen and Zhu, Song-Chun and Zhu, Yixin},
-  booktitle={International Conference on Computer Vision (ICCV)},
+  journal={arXiv preprint arXiv:2109.00179},
   year={2021}
 }
 ```
