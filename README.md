@@ -76,13 +76,13 @@ For PointNet or DGCNN classification backbones, you may evaluate the learnt repr
 For PointNet:
 
 ```
-python evaluate_pointnet.py -w /path/to/your/pre-trained/checkpoints
+python BYOL/evaluate_pointnet.py -w /path/to/your/pre-trained/checkpoints
 ```
 
 For DGCNN:
 
 ```
-python evaluate_dgcnn.py -w /path/to/your/pre-trained/checkpoints
+python BYOL/evaluate_dgcnn.py -w /path/to/your/pre-trained/checkpoints
 ```
 
 ## Downstream Tasks
@@ -94,13 +94,13 @@ You can transform the pre-trained checkpoints to different downstream tasks by r
 For VoteNet:
 
 ```
-python transform_ckpt_votenet.py --input_path /path/to/your/pre-trained/checkpoints --output_path /path/to/the/transformed/checkpoints
+python BYOL/transform_ckpt_votenet.py --input_path /path/to/your/pre-trained/checkpoints --output_path /path/to/the/transformed/checkpoints
 ```
 
 For other backbones:
 
 ```
-python transform_ckpt.py --input_path /path/to/your/pre-trained/checkpoints --output_path /path/to/the/transformed/checkpoints
+python BYOL/transform_ckpt.py --input_path /path/to/your/pre-trained/checkpoints --output_path /path/to/the/transformed/checkpoints
 ```
 
 ### Fine-tuning and Evaluation for Downstream Tasks
