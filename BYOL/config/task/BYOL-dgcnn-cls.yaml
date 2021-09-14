@@ -1,7 +1,7 @@
 optimizer:
     weight_decay: 0.01
-    lr: 1e-4
-    type: adamw
+    lr: 1e-3
+    type: adam
 
 network: DGCNN
 dataset: ShapeNet # ShapeNet, ShapeNetPart, ModelNet40, ScanNet
@@ -21,4 +21,4 @@ window_length: 3
 dropout: 0.5
 num_workers: 32
 
-resume_ckpt: /mnt/data/siyuan/outputs/BYOL-cls-dgcnn-k=40-2048points-lr1e-4-bs36-poolingfeature-epoch100-adamw/epoch=36-val_loss=0.5884.ckpt
+resume_ckpt:
