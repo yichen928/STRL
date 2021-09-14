@@ -1,3 +1,3 @@
 task_model:
     class: BYOL.models.PointNet2ClassificationSSG
-    name: BYOL-cls-PointNet-2048points-lr1e-3-bs48-poolingfeature-normalized-50epoch-noCutout-noCrop
+    name: BYOL-cls-PointNet

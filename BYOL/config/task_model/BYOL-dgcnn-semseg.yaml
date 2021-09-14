@@ -1,3 +1,3 @@
 task_model:
     class: BYOL.models.BasicalModel
-    name: BYOL-semseg-dgcnn-k=20-4096points-lr2e-4-bs32-epoch100-ScanNetFrames
+    name: BYOL-semseg

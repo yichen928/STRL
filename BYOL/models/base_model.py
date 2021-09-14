@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim.lr_scheduler as lr_sched
-# from pointnet2_ops.pointnet2_modules import PointnetFPModule, PointnetSAModule
+
 from torch.utils.data import DataLoader, DistributedSampler
 from torchvision import transforms
 import math
@@ -11,7 +11,7 @@ import math
 import BYOL.data.data_utils as d_utils
 from BYOL.data.ModelNet40Loader import ModelNet40ClsContrast
 from BYOL.data.ShapeNetLoader import PartNormalDatasetContrast, WholeNormalDatasetContrast
-from BYOL.data.ScanNetLoader import ScannetWholeSceneContrast, ScannetWholeSceneContrastHeight, ScanNetFrameContrast, ScanNetFrameWhole
+from BYOL.data.ScanNetLoader import ScannetWholeSceneContrast, ScannetWholeSceneContrastHeight, ScanNetFrameContrast
 
 from BYOL.models.lars_scheduling import LARSWrapper
 
@@ -268,14 +268,6 @@ class BasicalModel(pl.LightningModule):
             self.val_dset = ScannetWholeSceneContrastHeight(
                 self.hparams["num_points"], transforms_1=eval_transforms_scannet_1, transforms_2=eval_transforms_scannet_2, train=False,
                 no_height=True)
-        elif self.hparams["dataset"] == "ScanNetWhole":
-            print("Dataset: ScanNetWhole")
-            self.train_dset = ScanNetFrameWhole(
-                self.hparams["num_points"], transforms_1=train_transforms_scannet_1, transforms_2=train_transforms_scannet_2,
-                no_height=True, train=True, root_path=self.hparams["root_path"], mode=self.hparams["transform_mode"], k=self.hparams["window_length"])
-            self.val_dset = ScanNetFrameWhole(
-                self.hparams["num_points"], transforms_1=train_transforms_scannet_1, transforms_2=train_transforms_scannet_2,
-                no_height=True, train=False, root_path=self.hparams["root_path"], mode=self.hparams["transform_mode"], k=self.hparams["window_length"])
 
     def _build_dataloader(self, dset, mode, batch_size=None):
         if batch_size is None:
