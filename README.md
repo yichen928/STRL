@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds
 
 
@@ -124,3 +125,9 @@ If you found our paper or code useful for your research, please cite the followi
 }
 ```
 
+=======
+# STRL
+Code for the paper "Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds".
+
+Code is coming in a few days.
+>>>>>>> d36f826d247c3f1c33a7de7c96aa1976cfb5b870
