@@ -1,10 +1,10 @@
 defaults:
-    - task: BYOL-votenet-detection
+    - task: BYOL-dgcnn-cls
     - task_model: ${defaults.0.task}
 
 hydra:
   run:
-    dir: outputs
+    dir: outputs/${task_model.name}
 
 gpus: 
     - 0
