@@ -39,7 +39,7 @@ Please download the used dataset with the following links:
 + ShapeNet: https://drive.google.com/uc?id=1sJd5bdCg9eOo3-FYtchUVlwDgpVdsbXB
 
 + ModelNet40: https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip
-+ ScanNet (subset): Please follow the instruction in their official [website](http://www.scan-net.org/). The 25k frames subset is enough for our model.
++ ScanNet (subset): Please follow the instruction in their official [website](http://www.scan-net.org/). The 25k frames subset is enough for our model. You may also need to download the preprocessed data for evaluation [here](https://shapenet.cs.stanford.edu/media/scannet_data_pointnet2.zip).
 
 Make sure to put the files in the following structure:
 
