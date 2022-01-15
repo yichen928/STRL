@@ -1,5 +1,5 @@
 optimizer:
-    weight_decay: 0.01
+    weight_decay: 0.00
     lr: 1e-3
     type: adam
 
@@ -7,7 +7,7 @@ network: DGCNN
 dataset: ShapeNet # ShapeNet, ShapeNetPart, ModelNet40, ScanNet
 num_points: 2048 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
 epochs: 100
-batch_size: 36
+batch_size: 32
 acc_batches: 1
 transform_mode: both
 
@@ -21,4 +21,4 @@ window_length: 3
 dropout: 0.5
 num_workers: 32
 
-resume_ckpt:
+resume_ckpt: 
