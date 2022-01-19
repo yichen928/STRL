@@ -9,7 +9,7 @@ num_points: 2048 # 2048 for ShapeNet, 4096 for ModelNet40, 4096 for ScanNet
 epochs: 50
 batch_size: 48
 acc_batches: 1
-transform_mode: spatial
+transform_mode: both
 
 decay_rate: 0.996
 mlp_hidden_size: 4096

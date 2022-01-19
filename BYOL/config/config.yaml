@@ -1,5 +1,5 @@
 defaults:
-    - task: BYOL-dgcnn-cls
+    - task: BYOL-pointnet-cls
     - task_model: ${defaults.0.task}
 
 hydra:
@@ -8,7 +8,6 @@ hydra:
 
 gpus: 
     - 0
-    - 1
 
 optimizer: ??
 
